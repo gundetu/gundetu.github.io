@@ -1,0 +1,371 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+body{
+    background-color:rgb(113, 113, 113);
+}
+
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(Bilder.prosjekt/bakgrunn.jpg);
+    background-position:center;
+    background-size:cover;
+    box-sizing: border-box;
+
+}
+
+/*Styling for skog og sprint kartegn*/
+main {
+    max-width: 500px;
+    width: 95%;
+    margin: 20px auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 88%;
+    align-items: center;
+    grid-gap: 10%;
+}
+
+.col{
+    flex-basis:50%;
+    margin-left: 5%;
+
+
+}
+
+h1{
+    color:#fff;
+    font-size: 80px;
+    display: flex;
+    
+}
+
+p{
+    color:#fff;
+    font-size: 11px;
+    line-height: 15px;
+    margin-top: 15px;
+    display: flex;
+
+}
+
+a > button{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    transition: transform 0.5s;
+}
+
+a > button:hover{
+    transform: translateX(+10px);
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    transition: transform 0.5s;
+    background-position: center;
+    background-size: cover;
+}
+
+.card1{
+    background-image: url(Bilder.prosjekt/kart2.jpg);
+}
+.card2{
+    background-image: url(Bilder.prosjekt/kartegn.png);
+}
+.card3{
+    background-image: url(Bilder.prosjekt/Avstand.png);
+}
+.card4{
+    background-image: url(Bilder.prosjekt/veivalg.png);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    color:#fff;
+    text-shadow: 0 0 5px #999;
+}
+
+p{
+    text-shadow: 0 0 5px #000;
+    font-size: 8px;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding:10px 20px;
+
+    
+    transition: transform 0.5s;
+}
+
+header nav {
+    display: flex;
+    height: 12%;
+    align-items: center; 
+    margin: 20px;
+}
+
+header .toppnav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navtekst:hover{
+    transform: translateY(-10px);
+}
+
+
+.orientering{
+    width: 100%;
+    height: 789px;
+}
+
+.fa-bars{
+    display:none;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+}
+
+
+.fa-compass{
+    color: white;
+    display: flex;
+    align-items: center;
+
+    width: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    padding:10px 20px;
+}
+
+
+
+/*Styling av sprint*/
+ 
+  .wrapper {
+    box-sizing: content-box;
+    width: 35%;
+    max-height: 600px;
+    padding: 2.5em 3em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
+  .game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+  }
+  .stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+  }
+  .stats-container span {
+    font-weight: 600;
+  }
+  .card-container {
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+  }
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+
+  
+  .card-before {
+    background-color: #f4c531;
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+
+  .card-after img{
+    width: 100%;
+    height: 100%;
+  }
+  .card-after {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+
+  }
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+  .controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(Bilder.prosjekt/bakgrunn.jpg);
+    background-position:center;
+    background-size:cover;
+  }
+
+  
+  button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+  }
+  #stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .controls-container button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+  #result {
+    text-align: center;
+  }
+  #result h2 {
+    font-size: 2.5em;
+  }
+  #result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }
+
+@media(max-width:1200px){
+    .row{
+        display:flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 70px;
+    }
+    .colcard{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    }
+    .card{
+        width: 140px;
+        height: 160px;
+    }
+ .col{
+    margin: 0;
+    flex-basis: 0;
+ }
+
+
+}
+
+@media(max-width:724px){
+   
+    a > button{
+        margin-top: 15px;
+    }
+    .colcard{
+        display:grid;
+        grid-template-columns: 1fr 1fr  ;
+    }
+
+    .row{
+        gap: 6vw;
+    }
+    
+    .col{
+        text-align: center;
+    }
+}
+
+
+@media(max-width:600px){
+   
+
+    h1 {
+        font-size: 13vw;
+    }
+    header{
+        flex-direction: column;
+    }
+    header .toppnav {
+        width: 100%
+    }
+    header nav {
+        display:none;
+    }
+    .fa-bars {
+        display: flex;
+        align-items: center;
+    }
+
+    header nav.show{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
