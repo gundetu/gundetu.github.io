@@ -1,0 +1,595 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+
+
+body{
+    background-color:rgb(113, 113, 113);
+}
+
+
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(Bilder.prosjekt/bakgrunn.jpg);
+    background-position:center;
+    background-size:cover;
+    box-sizing: border-box;
+
+
+}
+
+/*Styling for skog og sprint kartegn*/
+main {
+    max-width: 500px;
+    width: 95%;
+    margin: 10px auto;
+    border: 2px solid white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 88%;
+    align-items: center;
+    grid-gap: 10%;
+}
+
+.col{
+    flex-basis:50%;
+    margin-left: 5%;
+
+
+}
+
+h1{
+    color:#fff;
+    font-size: 80px;
+    display: flex;
+    
+}
+
+p{
+    color:#fff;
+    font-size: 11px;
+    line-height: 15px;
+    margin-top: 15px;
+    display: flex;
+
+}
+
+a > button{
+    width: 180px;
+    color: #000;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #fff;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+    transition: transform 0.5s;
+}
+
+a > button:hover{
+    transform: translateX(+10px);
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    transition: transform 0.5s;
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+}
+
+main {
+    padding: 20px;
+    max-width: 75%;
+    max-height: 77%;
+}
+
+
+
+.card1{
+    background-image: url(Bilder.prosjekt/kart2.jpg);
+}
+.card2{
+    background-image: url(Bilder.prosjekt/kartegn.png);
+}
+.card3{
+    background-image: url(Bilder.prosjekt/utover.jpeg);
+}
+.card4{
+    background-image: url(Bilder.prosjekt/veivalg.png);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+}
+
+h5{
+    color:#fff;
+    text-shadow: 0 0 5px #999;
+}
+
+.forside{
+    text-shadow: 0 0 5px #000;
+    font-size: 8px;
+}
+
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    padding:10px 20px;
+
+    
+    transition: transform 0.5s;
+}
+
+header nav {
+    display: flex;
+    height: 12%;
+    align-items: center; 
+    margin: 20px;
+}
+
+header .toppnav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.navtekst:hover{
+    transform: translateY(-10px);
+}
+
+
+.orientering{
+    width: 100%;
+    height: 789px;
+}
+
+.fa-bars{
+    display:none;
+    color: white;
+    font-size: 40px;
+    padding: 10px 20px;
+}
+
+
+.fa-compass{
+    color: white;
+    display: flex;
+    align-items: center;
+
+    width: 40px;
+    font-size: 40px;
+    cursor: pointer;
+    padding:10px 20px;
+}
+
+
+
+/*Styling av sprint*/
+ 
+  .wrapper {
+    box-sizing: content-box;
+    padding: 2em;
+    background-color: #ffffff;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 0.6em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  
+    min-height: 430px;
+  }
+  .game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+  }
+  .stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+  }
+  .stats-container span {
+    font-weight: 600;
+  }
+  .card-container {
+    position: relative;
+    width: 6.25em;
+    height: 6.25em;
+    cursor: pointer;
+  }
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+  }
+
+  
+  .card-before {
+    background-color: #f4c531;
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+
+  .card-after img{
+    width: 100%;
+    height: 100%;
+  }
+  .card-after {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+
+  }
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+  .controls-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(Bilder.prosjekt/bakgrunn.jpg);
+    background-position:center;
+    background-size:cover;
+  }
+
+  
+  button {
+    border: none;
+    border-radius: 0.3em;
+    padding: 1em  1.5em;
+    cursor: pointer;
+  }
+  #stop {
+    font-size: 1.1em;
+    display: block;
+    margin: 1.1em auto 0 auto;
+    background-color: #000000;
+    color: #ffffff;
+  }
+  .controls-container button {
+    font-size: 1.3em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+  #result {
+    text-align: center;
+  }
+  #result h2 {
+    font-size: 2.5em;
+  }
+  #result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }
+
+
+
+
+.underdeler{
+    width: 100%;
+    height: 100vh;
+}
+
+.Fakta{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.veivalgFakta{
+    background-color: whitesmoke;
+    width: 33.33%;
+    height: 80%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+    padding:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.veivalgFakta img{
+    height: 50%;
+    width: auto;
+    margin-bottom: 5%
+}
+.veivalgFakta p{
+    color: black;
+    line-height: 20px;
+    
+}
+
+
+.veivalgSpill{
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7f7 100%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .quiz-container{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    width: 600px;
+    overflow: hidden;
+   
+  }
+  .quiz-header{
+    padding: 3rem;
+  }
+
+  .bilder{
+    text-align: center;
+    width:100%;
+  }
+
+  .text > h1{
+    display: flex;
+    width: 100vw;
+    max-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin-top: 250px;
+
+}
+
+.box{
+    width: 30%;
+    float: left;
+    margin: 50px 20px;
+    background-color: white;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.box h4{
+    margin-bottom: 10px;
+}
+
+.box p{
+    font-size: 15px;
+    line-height: 28px;
+    height: 90px;
+    overflow: hidden;
+    color: black; 
+    text-shadow: none;
+}
+ 
+.box button {
+    display: inline-block;
+    color: white;
+    background-color: #2196f3;
+    text-decoration: none;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+.box a:hover{
+    box-shadow: 0 5px 5px rgba(0,0,0,0.2);
+}
+
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 1%;
+    margin-bottom: 0.5%;
+ 
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 6px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+    color: black;
+  }
+
+
+
+ 
+
+
+  @media(max-width:1200px){
+    .row{
+        display:flex;
+        flex-direction: column;
+        margin-left: 20px;
+        margin-right: 20px;
+        gap: 70px;
+    }
+    .colcard{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr  ;
+    }
+    .card{
+        width: 140px;
+        height: 160px;
+    }
+ .col{
+    margin: 0;
+    flex-basis: 0;
+ }
+
+ .card-container{
+    width: 9vw;
+    height: 9vw;
+ }
+}
+
+@media(max-width: 1000px){
+    .card-container{
+        width: 13vw;
+        height: 13vw;
+    }
+
+    .Fakta{
+        flex-direction: column;
+       gap: 3%;
+       padding-top:3%;
+       padding-bottom: 3%;;
+    }
+    .veivalgFakta{
+        width: 90%;
+        height: 30%;
+        flex-direction: row;
+    }
+
+    .veivalgFakta img{
+        height: 100%;
+        margin-bottom: 0;
+        margin-right: 3%;
+    }
+    .veivalgFakta p{
+        font-size: 1.5vw;
+        line-height: 3vw;
+    }
+}
+
+@media(max-width:724px){
+   
+    a > button{
+        margin-top: 15px;
+    }
+    .colcard{
+        display:grid;
+        grid-template-columns: 1fr 1fr  ;
+    }
+
+    .row{
+        gap: 6vw;
+    }
+    
+    .col{
+        text-align: center;
+    }
+
+
+
+    .quiz-container{
+        width: 75%
+    }
+
+    
+
+}
+
+
+@media(max-width:600px){
+   
+
+    h1 {
+        font-size: 13vw;
+    }
+    header{
+        flex-direction: column;
+    }
+    header .toppnav {
+        width: 100%
+    }
+    header nav {
+        display:none;
+    }
+    .fa-bars {
+        display: flex;
+        align-items: center;
+    }
+
+    header nav.show{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .Fakta{
+        
+       gap: 4%;
+       padding-top:4%;
+       padding-bottom: 4%;;
+    }
+
+    .card-container{
+        width: 14vw;
+        height: 14vw;
+    }
+
+
+
+    .veivalgKart{
+        width: 210px;
+    }
+
+    .quiz-header{
+        padding: 8vw;
+    }
+    #question{
+        font-size: 5vw;
+    }
+
+    .veivalgFakta p{
+        font-size: 2.3vw;
+    }
+
+}
