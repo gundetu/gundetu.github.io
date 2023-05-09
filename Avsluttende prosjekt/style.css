@@ -18,7 +18,7 @@ body{
 
 .container{
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(Bilder.prosjekt/bakgrunn.jpg);
     background-position:center;
     background-size:cover;
