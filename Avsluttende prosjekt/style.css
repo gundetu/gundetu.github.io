@@ -803,7 +803,10 @@ td> a{
         display: flex;
         margin-top: 10px;
     }
-
+.card-before, .card-after{
+    border: 2px solid #000000;
+}
+   
    
 
 
