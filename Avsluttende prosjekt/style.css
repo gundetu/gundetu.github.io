@@ -123,6 +123,7 @@ main {
 }
 .card4{
     background-image: url(Bilder.prosjekt/veivalg.png);
+    background-position: center;
 }
 
 .card:hover{
