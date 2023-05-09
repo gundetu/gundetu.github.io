@@ -15,6 +15,18 @@ function showNav (){
 }
 
 
+if(!localStorage.best){
+    localStorage.best = 0
+}
+
+if(!localStorage.highscore){
+    localStorage.highscore = 0
+}
+
+if(!localStorage.trekk){
+    localStorage.trekk = 200;
+  }
+
 
 
 
