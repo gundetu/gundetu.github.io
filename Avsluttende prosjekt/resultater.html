@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spillnettside</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        *{
+            margin:0; 
+        }
+
+        h2,p{
+            color: black; 
+        }
+
+        td{
+            color:black
+        }
+
+        
+
+    </style>
+<body>
+
+<div class="container">
+    <header>
+        <div class="toppnav">
+           <a href="index.html"><i class="fa-regular fa-compass"></i></a> 
+           <a href="#"><i class="fa-solid fa-bars"></i></a> 
+        </div>
+        <nav>
+            <a class="navtekst" href="resultater.html">RESULTATER</a>
+            <a class="navtekst" href="kilder.html">KILDER</a>
+            <a class="navtekst" href="meg.html">OM MEG</a>
+        </nav>
+    </header>
+
+    <div id="resultaterboks">
+
+        <div id= "resultater">
+            <h2>Dine resultater</h2>
+
+            <table>
+                <tr>
+                    <th>Oppgave</th>
+                    <th>Din highscore </th>
+                </tr>
+                <tr>
+                    <td>Veivalg quiz</td>
+                    <td id="Quiz"></td>
+                </tr>
+                <tr>
+                    <td>Kartegn skog</td>
+                    <td id= "karttegn"></td>
+                </tr>
+                <tr>
+                    <td>Kartegn Memory</td>
+                    <td id ="memory"></td>
+                </tr>
+
+            </table>
+        </div>
+
+    </div>
+
+   
+
+</div>
+
+    
+
+<script src="resultater.js"></script>
+<script src="JavaScript.js"></script>
+</body>
+</html>
