@@ -116,14 +116,15 @@ main {
     background-image: url(Bilder.prosjekt/kart2.jpg);
 }
 .card2{
-    background-image: url(Bilder.prosjekt/kartegn.png);
+    background-image: url(Bilder.prosjekt/kartegnutenbakgrunn.png.png);
+    background-position: top;
 }
 .card3{
     background-image: url(Bilder.prosjekt/utover.jpeg);
 }
 .card4{
     background-image: url(Bilder.prosjekt/veivalg.png);
-    background-position: center;
+    
 }
 
 .card:hover{
